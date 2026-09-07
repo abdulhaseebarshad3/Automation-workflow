@@ -49,7 +49,9 @@ export function Hero() {
         </div>
 
         <div className="relative animate-fade-in [animation-delay:200ms]">
-          <div className="glow-border animate-float overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(8,15,40,0.6)]">
+          <div className="hero-orbit pointer-events-none absolute inset-8 rounded-full border border-cyan-300/10" />
+          <div className="hero-orbit pointer-events-none absolute inset-16 rounded-full border border-violet-300/10 [animation-delay:-4s]" />
+          <div className="glow-border hero-workflow-card overflow-hidden rounded-3xl shadow-[0_30px_80px_rgba(8,15,40,0.6)]">
             <Image
               src="/images/hero-workflow-animated.svg"
               alt="Animated n8n workflow showing a new lead moving through an AI agent, data enrichment, CRM, and Slack"
@@ -59,7 +61,7 @@ export function Hero() {
               className="h-auto w-full"
             />
           </div>
-          <div className="glass absolute -bottom-6 -left-4 hidden rounded-2xl px-4 py-3 sm:block">
+          <div className="hero-status-card glass absolute -bottom-6 -left-4 hidden rounded-2xl px-4 py-3 sm:block">
             <p className="text-xs text-slate-400">Trigger → AI → action</p>
             <p className="text-sm font-semibold text-white">Your workflow, ready to run.</p>
           </div>

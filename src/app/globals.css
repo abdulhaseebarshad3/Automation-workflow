@@ -142,6 +142,15 @@ body {
     background-position: 400px 0;
   }
 }
+@keyframes hero-orbit {
+  from { transform: rotate(0deg) scale(0.98); }
+  50% { transform: rotate(180deg) scale(1.03); }
+  to { transform: rotate(360deg) scale(0.98); }
+}
+@keyframes hero-card-float {
+  0%, 100% { transform: perspective(1200px) rotateY(-2deg) rotateX(1deg) translateY(0); }
+  50% { transform: perspective(1200px) rotateY(2deg) rotateX(-1deg) translateY(-10px); }
+}
 
 .animate-fade-in {
   animation: fade-in 0.6s ease both;
@@ -162,6 +171,13 @@ body {
   stroke-dasharray: 6 6;
   animation: dash 20s linear infinite;
 }
+
+.hero-orbit { animation: hero-orbit 16s linear infinite; }
+.hero-workflow-card {
+  animation: hero-card-float 7s ease-in-out infinite;
+  transform-style: preserve-3d;
+}
+.hero-status-card { animation: slide-up 0.7s 0.55s cubic-bezier(0.16, 1, 0.3, 1) both; }
 
 .skeleton {
   background: linear-gradient(90deg, #0f1530 25%, #161d3d 37%, #0f1530 63%);
